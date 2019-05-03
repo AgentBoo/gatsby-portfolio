@@ -20,7 +20,8 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "react-spring": "^8.0.19"
+    "react-spring": "^8.0.19",
+    "react-string-replace": "^0.4.4"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
