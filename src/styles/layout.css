@@ -29,6 +29,7 @@ footer {
 header,
 footer{
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	margin-top: var(--spacer);
 	margin-bottom: var(--spacer);
@@ -37,4 +38,8 @@ footer{
 main {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+footer{
+	line-height: 2;
 }

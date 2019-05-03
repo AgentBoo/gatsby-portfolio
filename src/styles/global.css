@@ -10,7 +10,7 @@
   --pink: #ee4266;
   --robin: #93e1d8;
   --white: #fdfffc;
-  --primary: var(--robin);
+  --primary: var(--pink);
   --font-family-cursive: "Cabin Sketch", cursive;
   --font-family-sans: "Cabin", sans-serif;
   --font-family-serif: "Bitter", serif;
@@ -21,9 +21,10 @@
   --medium: 768px;
   --small: 576px;
   --extra-small: 375px;
-  --page-margin: calc(calc(100% - var(--large))/2);
+  --page-margin: minmax(calc(calc(100% - var(--large))/2), 1fr);
   --spacer: 50px;
 }
+
 html{
   background: var(--white);
   box-sizing: border-box;
@@ -214,6 +215,7 @@ li *:last-child {
 p {
   margin: 0;
   padding: 0;
+  font-family: var(--font-family-serif);
   text-indent: 4em;
 }
 p *:last-child {
@@ -349,6 +351,40 @@ hr{
   padding: 0;
 }
 
+nav a[href].site-title {
+  background: var(--primary);
+  border-color: transparent;
+  color: var(--white);
+  display: inline-block;
+  font-size: 1.38316rem;
+  font-weight: bold;
+  padding: calc(0.4rem + 0.2vw) calc(1rem + 0.1vw);
+}
+
+nav a[href].site-title:hover {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+
+nav a[href].nav-link {
+  border-color: transparent;
+  border-width: 4px;
+  font-size: 0.78405rem;
+  margin: 0 calc(calc(1rem + 0.1vw) * 2);
+  padding-bottom: 4px;
+}
+
+nav a[href].nav-link:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+nav a[href].nav-link-active {
+  border-color: var(--black);
+  color: var(--black);
+}
+
 /**
  * CANVAS PARTICLES 
  */
@@ -359,4 +395,8 @@ hr{
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.xs{
+  font-size: 0.7em;
 }
