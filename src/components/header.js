@@ -6,11 +6,16 @@ import { Peekaboo } from "./peekaboo"
 const Header = ({ siteTitle }) => (
 	<header>
 		<nav className="nav-links">
-			<Link to="/" className="site-title">
+			<Link 
+				to="/" 
+				className="site-title">
 				{siteTitle}
 			</Link>
-			<Link to="/about" className="nav-link" activeClassName="nav-link-active">
-				About
+			<Link
+				to="/about"
+				className="nav-link title"
+				activeClassName="nav-link-active">
+				<strong>About</strong>
 			</Link>
 		</nav>
 		<Peekaboo />

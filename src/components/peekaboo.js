@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const faces = [":D", "^_^", "*w*", "@_@"]
+const faces = ["uwu", "^_^", "*_*", "@_@", "0_0"]
 
 const Peekaboo = () => {
 	let [face, setFace] = useState("0_0")

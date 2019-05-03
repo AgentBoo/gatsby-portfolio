@@ -32,7 +32,7 @@ const About = () => (
 						))}
 					</div>
 					<aside>
-						<h6 className="title">About me</h6>
+						<h6 className="title">Other than that ...</h6>
 						<FormattedText className="meta" text={l10NJson.about.addendum} />
 					</aside>
 				</section>
