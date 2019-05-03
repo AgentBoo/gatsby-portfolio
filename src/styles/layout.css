@@ -6,61 +6,27 @@
  * de facto applied globally.
  */
 
+.page-grid {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: max-content;
+	grid-template-columns:
+		var(--page-margin)
+		[main-start]
+		repeat(7, 1fr)
+		[main-center]
+		repeat(7, 1fr)
+		[main-end]
+		var(--page-margin);
+}
+
 header,
 main,
-footer{
-	margin-right: var(--page-margin);
-	margin-left: var(--page-margin);
+footer {
+	grid-column: main-start/main-end;
 }
 
-header{
-	display: flex;
-		align-items: center;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-	margin-top: var(--spacer);
-	margin-bottom: var(--spacer);;
-}
-
-/* site title */
-
-header a[href].site-title{
-	background: var(--primary);
-	border-color: transparent;
-	color: var(--white);
-	display: inline-block;
-	font-size: 1.38316rem;
-	font-weight: bold;
-	padding: calc(0.4rem + 0.2vw) calc(1rem + 0.1vw);
-}
-
-header a[href].site-title:hover{
-	background: var(--black);
-	border-color: var(--black);
-	color: var(--white);
-}
-
-header a[href].internal-link{
-	border-color: transparent;
-	color: red;
-	text-transform: uppercase;
-}
-
-header a[href].internal-link:hover{
-	border-color: var(--primary);
-	color: var(--primary);
-}
-
-header a[href].active-link{
-	border-color: orange;
-	color: orange;
-}
-
-main{
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
+header,
 footer{
 	display: flex;
 	justify-content: space-between;
@@ -68,10 +34,7 @@ footer{
 	margin-bottom: var(--spacer);
 }
 
-.page-grid{
-	display: grid;
-		grid-auto-flow: row;
-		grid-auto-rows: max-content;
-		grid-template-columns: [main-start] repeat(7, 1fr) [main-center] repeat(7, 1fr) [main-end];
-	max-width: var(--extra-large);
+main {
+	margin-top: 0;
+	margin-bottom: 0;
 }
