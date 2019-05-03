@@ -1,3 +1,33 @@
 /**
  * About page css
  */
+
+.about {
+	display: grid;
+	grid-gap: var(--spacer);
+	grid-template-columns: 1fr 1fr;
+	margin-top: var(--spacer);
+	text-align: justify;
+}
+
+.about-details {
+	display: block;
+}
+
+.about-details > section {
+	padding-top: var(--spacer);
+}
+
+.about-details > section:nth-of-type(1) {
+	padding-top: 0;
+}
+
+.about > aside {
+	padding-bottom: var(--spacer);
+}
+
+@media screen and (max-width: 992px) {
+	.about {
+		grid-template-columns: 1fr;
+	}
+}
