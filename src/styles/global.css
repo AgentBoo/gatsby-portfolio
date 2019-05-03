@@ -1,0 +1,362 @@
+/** 
+ * Global css is imported inside gatbsy-browser.js 
+ */
+
+:root {
+  --black: #2f243a;
+  --grey: #757780;
+  --lightgrey: #f2f2f3;
+  --pale: #f7f8f9;
+  --pink: #ee4266;
+  --robin: #93e1d8;
+  --white: #fdfffc;
+  --primary: var(--robin);
+  --font-family-cursive: "Cabin Sketch", cursive;
+  --font-family-sans: "Cabin", sans-serif;
+  --font-family-serif: "Bitter", serif;
+  --font-size: calc(14px + 0.2vw);
+  --line-height: calc(1rem + 1vw);
+  --extra-large: 1200px;
+  --large: 992px;
+  --medium: 768px;
+  --small: 576px;
+  --extra-small: 375px;
+  --page-margin: calc(calc(100% - var(--large))/2);
+  --spacer: 50px;
+}
+html{
+  background: var(--white);
+  box-sizing: border-box;
+  font-size: var(--font-size);
+}
+body {
+  background: transparent;
+  color: var(--black);
+  font-family: var(--font-family-sans);
+  font-kerning: normal;
+  font-size: var(--font-size);
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: common-ligatures;
+  font-weight: normal;
+  line-height: var(--line-height);
+  margin: 0;
+  min-width: var(--extra-small);
+  overflow-y: scroll;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-wrap: break-word;
+}
+canvas {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+img {
+  border-style: none;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+form,
+iframe,
+nav,
+noscript,
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+[hidden] {
+  display: none;
+}
+a {
+  background-color: transparent;
+  border-bottom: solid 0.1em var(--black);
+  color: var(--black);
+  text-decoration: none;
+  -webkit-text-decoration-skip: objects;
+}
+a[href]:active,
+a[href]:hover {
+  outline-width: 0;
+}
+a[href]:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+textarea {
+  overflow: auto;
+}
+button,
+input {
+  overflow: visible;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+button,
+select {
+  text-transform: none;
+}
+[type="button"], 
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+[type="button"]:disabled, 
+[type="reset"]:disabled,
+[type="submit"]:disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bold;
+}
+small {
+  font-size: 80%;
+}
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: var(--font-sans-serif), -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  line-height: 1.42;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.62671rem;
+}
+h3 {
+  font-size: 1.38316rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.85028rem;
+}
+h6 {
+  font-size: 0.78405rem;
+}
+hgroup {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style-position: outside;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+li, 
+ul li,
+ol li {
+  padding-left: 0;
+}
+li > ul,
+li > ol {
+  margin-left: 1.52rem;
+  margin-bottom: calc(1.52rem / 2);
+  margin-top: calc(1.52rem / 2);
+}
+li *:last-child {
+  margin-bottom: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+  text-indent: 4em;
+}
+p *:last-child {
+  margin-bottom: 0;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+hr{
+  width: 100%;
+  grid-column: main-start/main-end;
+}
+@media only screen and (max-width: 768px) {
+  h1,
+  h2{
+    font-size: 1.62671rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 100%;
+  }
+  h1,
+  h2{
+    font-weight: normal;
+  }
+}
+
+/* TOOLBOX */
+
+.meta {
+  color: var(--grey);
+  font-family: var(--font-family-serif);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.list-inline {
+  display: flex;
+}
+
+.list-inline > * {
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  list-style: none;
+  margin-right: 1.52rem;
+}
+
+.list-block {
+  display: block;
+}
+
+.list-block li {
+  list-style: none;
+}
+
+.title,
+.subtitle {
+  text-transform: uppercase;
+}
+
+.title{
+  letter-spacing: 1px;
+}
+
+.subtitle{
+  background: var(--black);
+  color: #fff;
+  font-family: var(--font-family-serif);
+  padding: 0.2em 0.8em;
+}
+
+.pigment {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.button {
+  background: var(--black);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-family-serif);
+  z-index: 1000;
+}
+
+.button:active,
+.button:hover{
+  background: var(--primary);
+  transition: background 0.3s ease-in-out;
+}
+
+.button.primary{
+  border-radius: 1.5px;
+  display: inline-block;
+  padding: 1.52em;
+  text-align: center;
+}
+
+.button.round {
+  border-radius: 50%;
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  height: 45px;
+  padding: 0;
+  width: 45px;
+}
+
+.peekaboo {
+  background-color: var(--black);
+  border-radius: 50%;
+  color: #fff;
+  cursor: default;
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  font-family: var(--font-family-cursive);
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+}
+
+/**
+ * CANVAS PARTICLES 
+ */
+
+#___particles canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
