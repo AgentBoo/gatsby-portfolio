@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
 		render={data => (
 			<Fragment>
 				<Header siteTitle={data.site.siteMetadata.title} />
-				<main>{children}</main>
+				<main className="page-grid">{children}</main>
 				<Footer siteTitle={data.site.siteMetadata.title} />
 			</Fragment>
 		)}

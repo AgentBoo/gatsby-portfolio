@@ -24,8 +24,10 @@ https://stackoverflow.com/questions/8969381/what-is-the-difference-between-displ
 <br/>
  
 #### Misc
+**1. Responsive breakpoints**
+https://getbootstrap.com/docs/4.3/layout/overview/
 
-Additional colors that I might consider using in the future:
+**2. Additional colors that I might consider using in the future**
 ``` 
 --paper: #f8f4e3;
 --brightyellow: #ffe74c;
@@ -34,8 +36,10 @@ Additional colors that I might consider using in the future:
 --inchworm: #9be564;
 --shamrock: #5bba6f;
 --keylime: #e2eb98;
+--blue: #a1b5d8;
 --lightblue: #9ae5e6;
 --lightbeige: #c69f89;
+--chestnut: #d5aca9;
 ```
 
 <br/>
