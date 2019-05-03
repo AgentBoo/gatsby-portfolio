@@ -1,15 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import Peekaboo from "./peekaboo"
 
 const Header = ({ siteTitle }) => (
 	<header>
-		<Link to="/" className="site-title">
-			{siteTitle}
-		</Link>
-		<Link to="/about" className="internal-link" activeClassName="active-link">
-			About me
-		</Link>
+		<h3>
+			<Link to="/">{siteTitle}</Link>
+		</h3>
+		<Peekaboo />
 	</header>
 )
 

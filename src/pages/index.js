@@ -1,16 +1,24 @@
 import React from "react"
-import { Layout, SEO } from "../components"
-import { Introduction, Social, Projects, Updates } from "../components"
+import {
+	Layout,
+	SEO,
+	Introduction,
+	Social,
+	About,
+	Projects,
+} from "../components"
 
-import "./index.css"
+import "../styles/index.css"
 
 const IndexPage = () => (
 	<Layout>
-		<SEO title="ZH" keywords={[`react`, `zh`, `han`, `hanova`]} />
-		<Introduction />
-		<Social />
-		<Projects />
-		<Updates />
+		<SEO title="ZH" keywords={[`gatsby`, `application`, `react`]} />
+		<div className="index-page-grid">
+			<Introduction />
+			<Social />
+			<About />
+			<Projects />
+		</div>
 	</Layout>
 )
 
