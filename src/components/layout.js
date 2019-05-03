@@ -25,11 +25,11 @@ const Layout = ({ children }) => (
 			}
 		`}
 		render={data => (
-			<Fragment>
+			<div className="page-grid">
 				<Header siteTitle={data.site.siteMetadata.title} />
 				<main>{children}</main>
 				<Footer siteTitle={data.site.siteMetadata.title} />
-			</Fragment>
+			</div>
 		)}
 	/>
 )
