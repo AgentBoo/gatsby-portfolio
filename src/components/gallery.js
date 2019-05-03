@@ -26,18 +26,24 @@ const Gallery = ({ projects }) => {
 
 	return (
 		<div className="gallery">
-			<section className="gallery-preview">
+			<div className="gallery-preview">
 				{transitions.map(({ item, props, key }) => (
 					<animated.div key={key} style={props}>
 						<div className="preview">
-							<h4 className="subtitle">
+							<h6>
 								<a href={item.url}>{item.title}</a>
-							</h4>
+							</h6>
 						</div>
 					</animated.div>
 				))}
+			</div>
+			
+			<div className="gallery-comment">
+				<h6 className="title">{projects[page].title}</h6>
+				<FormattedText className="meta" text={projects[page].text} />
+			</div>
 
-				<div className="gallery-controls">
+			<div className="gallery-controls">
 					{/* prettier-ignore */}
 					<Button
 						variant="round"
@@ -53,12 +59,6 @@ const Gallery = ({ projects }) => {
 						<Glyph glyph="long-arrow-alt-right" />
 					</Button>
 				</div>
-			</section>
-			
-			<div className="gallery-comment">
-				<h6 className="title">{projects[page].title}</h6>
-				<FormattedText className="meta" text={projects[page].text} />
-			</div>
 		</div>
 	)
 }

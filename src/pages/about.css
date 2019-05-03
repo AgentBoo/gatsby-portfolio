@@ -22,10 +22,6 @@
 	padding-top: 0;
 }
 
-.about > aside {
-	padding-bottom: var(--spacer);
-}
-
 @media screen and (max-width: 992px) {
 	.about {
 		grid-template-columns: 1fr;
