@@ -26,7 +26,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Cabin`
+            family: `Cabin`,
+            variants: [`400`, `500`,`700`]
+          },
+          {
+            family: `Oxygen`,
+            variants: [`300`, `700`]
           },
           {
             family: `Cabin Sketch`
