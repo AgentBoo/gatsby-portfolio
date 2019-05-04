@@ -27,10 +27,14 @@ const Introduction = () => {
 					<animated.div style={style}>
 						<ul className="list-block">
 							<li>
-								<FormattedText type="h1" text={l10NJson.introduction.text} />
+								<FormattedText 
+									type="h2" 
+									text={l10NJson.introduction.text} />
 							</li>
 							<li>
-								<FormattedText type="h2" text={l10NJson.introduction.subtext} />
+								<FormattedText 
+									type="h2" 
+									text={l10NJson.introduction.subtext} />
 							</li>
 						</ul>
 					</animated.div>

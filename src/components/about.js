@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { FormattedText } from "./formattedText"
 
@@ -20,23 +20,27 @@ const About = () => (
 			}
 		`}
 		render={({ l10NJson }) => (
-			<Fragment>
+			<section className="about">
 				<h2>{l10NJson.about.title}</h2>
-				<section className="about">
+				<div className="about-grid">
 					<div className="about-details">
 						{l10NJson.about.details.map(paragraph => (
 							<section key={paragraph.title}>
-								<h6 className="title">{paragraph.title}</h6>
-								<FormattedText className="meta" text={paragraph.text} />
+								<h4><strong>{paragraph.title}</strong></h4>
+								<FormattedText 
+									className="meta" 
+									text={paragraph.text} />
 							</section>
 						))}
 					</div>
 					<aside>
-						<h6 className="title">Other than that ...</h6>
-						<FormattedText className="meta" text={l10NJson.about.addendum} />
+						<h4><strong>Other than that ...</strong></h4>
+						<FormattedText
+							className="meta"
+							text={l10NJson.about.addendum} />
 					</aside>
-				</section>
-			</Fragment>
+				</div>
+			</section>
 		)}
 	/>
 )

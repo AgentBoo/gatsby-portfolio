@@ -13,7 +13,7 @@ const Button = ({ variant, disabled, onClick, children }) => (
 )
 
 Button.defaultProps = {
-	variant: "primary",
+	variant: `primary`,
 	disabled: false,
 	onClick: noop,
 }

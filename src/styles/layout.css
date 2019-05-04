@@ -10,20 +10,22 @@
 	display: grid;
 	grid-auto-flow: row;
 	grid-auto-rows: max-content;
+	grid-gap: var(--spacer) 0;
 	grid-template-columns:
 		var(--page-margin)
-		[main-start]
+		[prim-start]
 		repeat(7, 1fr)
-		[main-center]
+		[prim-center]
 		repeat(7, 1fr)
-		[main-end]
+		[prim-end]
 		var(--page-margin);
+	margin-bottom: var(--spacer);
 }
 
 header,
 main,
 footer {
-	grid-column: main-start/main-end;
+	grid-column: prim-start/prim-end;
 }
 
 header,
@@ -31,15 +33,20 @@ footer{
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	margin-top: var(--spacer);
-	margin-bottom: var(--spacer);
+	margin-top: calc(var(--spacer) + 1vw);
+	margin-bottom: 1rem;
 }
 
 main {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: max-content;
+	grid-template-columns:
+		[main-start]
+		repeat(7, 1fr)
+		[main-center]
+		repeat(7, 1fr)
+		[main-end];
 	margin-top: 0;
 	margin-bottom: 0;
-}
-
-footer{
-	line-height: 2;
 }

@@ -12,8 +12,8 @@ const FormattedText = ({ type, className, text }) => {
 }
 
 FormattedText.defaultProps = {
-	type: "p",
-	className: "default",
+	type: `p`,
+	className: `default`,
 }
 
 FormattedText.propTypes = {

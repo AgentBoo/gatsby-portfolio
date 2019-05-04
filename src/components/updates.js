@@ -12,32 +12,36 @@ const Updates = () => (
 						learning
 					}
 				}
-
-				file(relativePath: { eq: "res.pdf" }) {
-					publicURL
-				}
 			}
 		`}
 		render={({ l10NJson, file }) => (
 			<section className="updates">
-				<h5 className="title pigment">{l10NJson.updates.title}</h5>
 				<ul className="list-block">
 					{l10NJson.updates.learning.map(text => (
-						<li className="meta">
-							<FormattedText key={text} type="span" text={text} />
+						<li>
+							<h3>
+							<FormattedText 
+								key={text} 
+								type="strong"
+								text={text} />
+								</h3>
 						</li>
 					))}
-					<li className="meta">
-						<span>
+					<li>
+						<h3>
+							<strong>
 							Other than that, I am learning how to play{" "}
-							<a href="http://beatsaber.com/">Beat Saber</a> on Expert mode. You
-							know. Because it's awesome.
-						</span>
+							<a href="http://beatsaber.com/">Beat Saber</a> on Expert mode.
+							</strong>
+						</h3>
 					</li>
 					<li>
-						<span className="meta">{"(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"}</span>
+						<h3>
+							 You	know. Because it's <strong>awesome.</strong>
+						</h3>
 					</li>
 				</ul>
+				<p><span>{" (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"}</span></p>
 			</section>
 		)}
 	/>

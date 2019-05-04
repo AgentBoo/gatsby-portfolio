@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 const Glyph = ({ glyph }) => <span className={`fas fa-${glyph}`} />
 
 Glyph.defaultProps = {
-	glyph: "heart",
+	glyph: `heart`,
 }
 
 Glyph.propTypes = {

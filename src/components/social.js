@@ -14,7 +14,6 @@ const Social = () => (
 						}
 					}
 				}
-
 				file(relativePath: { eq: "res.pdf" }) {
 					publicURL
 				}
@@ -22,23 +21,25 @@ const Social = () => (
 		`}
 		render={({ l10NJson, file }) => (
 			<section className="social">
-				<h5 className="title pigment">{l10NJson.social.title}</h5>
 				<ul className="list-inline">
+					<li>
+						<h3><strong>{l10NJson.social.title}</strong></h3>
+					</li>
 					{l10NJson.social.links.map(method => (
 						<li key={method.name}>
-							<h4>
+							<h3>
 								<a href={method.url} target="__blank">
-									{method.name}
+									<strong>{method.name}</strong>
 								</a>
-							</h4>
+							</h3>
 						</li>
 					))}
 					<li>
-						<h4>
+						<h3>
 							<a href={file.publicURL} target="__blank">
-								resume
+								<strong>resume</strong>
 							</a>
-						</h4>
+						</h3>
 					</li>
 				</ul>
 			</section>

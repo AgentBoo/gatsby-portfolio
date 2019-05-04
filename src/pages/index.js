@@ -8,9 +8,9 @@ const IndexPage = () => (
 	<Layout>
 		<SEO title="ZH" keywords={[`react`, `zh`, `zuzka`, `han`, `hanova`]} />
 		<Introduction />
+		<Updates />
 		<Social />
 		<Projects />
-		<Updates />
 	</Layout>
 )
 

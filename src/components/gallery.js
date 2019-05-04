@@ -5,7 +5,7 @@ import { FormattedText } from "./formattedText"
 import { Button } from "./button"
 import { Glyph } from "./glyph"
 
-const Gallery = ({ projects }) => {
+const Gallery = ({ title, projects }) => {
 	let [min, max] = [0, projects.length - 1]
 	let [page, setPage] = useState(min)
 
@@ -26,39 +26,50 @@ const Gallery = ({ projects }) => {
 
 	return (
 		<div className="gallery">
-			<div className="gallery-preview">
+			<section className="gallery-preview">
+				<ul className="list-inline">
+					<li>
+						<h3>
+							<strong>{title}</strong>
+						</h3>
+					</li>
+					<li>
+						<div className="gallery-controls">
+							<Button variant="round" disabled={page <= min} onClick={prevPage}>
+								<Glyph glyph="long-arrow-alt-left" />
+							</Button>
+							<Button variant="round" disabled={page >= max} onClick={nextPage}>
+								<Glyph glyph="long-arrow-alt-right" />
+							</Button>
+						</div>
+					</li>
+				</ul>
+				<ul className="list-inline">
+					{projects.map(project => (
+						<li key={project.title}>
+							<h3>
+								<a className={
+									project.title == projects[page].title ? "pigment" : "default"
+								} href={project.url}>
+									<strong>{project.title}</strong>
+								</a>
+							</h3>
+						</li>
+					))}
+				</ul>
 				{transitions.map(({ item, props, key }) => (
 					<animated.div key={key} style={props}>
-						<div className="preview">
-							<h6>
-								<a href={item.url}>{item.title}</a>
-							</h6>
+						<div className="gallery-description">
+							<div className="meta">
+								<FormattedText type="p" text={item.text} />
+								<a href={item.repo} target="__blank">
+									repo
+								</a>
+							</div>
 						</div>
 					</animated.div>
 				))}
-			</div>
-			
-			<div className="gallery-comment">
-				<h6 className="title">{projects[page].title}</h6>
-				<FormattedText className="meta" text={projects[page].text} />
-			</div>
-
-			<div className="gallery-controls">
-					{/* prettier-ignore */}
-					<Button
-						variant="round"
-						disabled={page <= min}
-						onClick={prevPage}>
-						<Glyph glyph="long-arrow-alt-left" />
-					</Button>
-					{/* prettier-ignore */}
-					<Button 
-						variant="round" 
-						disabled={page >= max} 
-						onClick={nextPage}>
-						<Glyph glyph="long-arrow-alt-right" />
-					</Button>
-				</div>
+			</section>
 		</div>
 	)
 }

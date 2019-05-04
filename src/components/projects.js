@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Gallery from "./gallery"
 
-const Projects = () => (
+const Projects = () => {
+
+	return (
 	<StaticQuery
 		query={graphql`
 			query {
@@ -21,11 +23,12 @@ const Projects = () => (
 		`}
 		render={({ l10NJson }) => (
 			<section className="projects">
-				<h5 className="title">{l10NJson.projects.title}</h5>
-				<Gallery projects={l10NJson.projects.gallery} />
+				<Gallery
+					title={l10NJson.projects.title} 
+					projects={l10NJson.projects.gallery} />
 			</section>
 		)}
 	/>
-)
+)}
 
 export default Projects

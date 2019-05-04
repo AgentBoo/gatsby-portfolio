@@ -1,7 +1,7 @@
 {
 	"introduction": {
 		"text": "Hello! I'm Zuzka, a _web developer_ based in Lafayette, IN, and owner of the best cat _Walter_.",
-		"subtext": "Available for _hire_"
+		"subtext": "I am most comfortable using _React_ for front-end development, but I am also currently trying out _Angular 7_."
 	},
 	"social": {
 		"title": "Check out my",
@@ -34,38 +34,38 @@
 		"addendum": "I was born in _Vietnam_, although I didn't get to stay there for very long. As soon as I was 18lb old, my family moved to the _Czech Republic_ and made it our new home. I spent most of my life there, and it wasn't half bad, so I'm glad my parents made that choice. It's a really lovely place.\nThen, I decided to move to the US a few years ago. I lived in _Virginia_ for some time, and now I live in _Indiana_. I think I'm going to stay here for a little while, but who knows, life seems to like pushing me to the west a lot. Maybe one day, I will make it full circle around the planet."
 	},
 	"projects": {
-		"title": "Projects",
+		"title": "Here are a few projects that I have worked on.",
 		"gallery": [
 			{
-				"title": "propensity",
+				"title": "Propensity",
 				"text": "Propensity is an app designed to help small charitable organizations manage their community of patrons. The heart of the app is built around a kanban board that simplifies identification of priority patrons and helps users take action. This is a project that I am currently volunteering to build. Slowly, but steadily. Built with _Django_ and the _React ecosystem_.",
-				"repo": "",
+				"repo": "https://demopropensity.herokuapp.com/",
 				"url": "https://demopropensity.herokuapp.com/"
 			},
 			{
 				"title": "ohi",
 				"text": "Ogura Hyakunin Isshu is an anthology of 100 poems written by 100 prominent Japanese poets. Inspired by this anthology, I created a site that displays a list of the poems and let's users search through them. The site is minimal in design and setup because it was meant to be a test ground for different technologies and app designs for Propensity. Built with _Django_ and _React_.",
-				"repo": "/",
-				"url": "/"
+				"repo": "https://github.com/AgentBoo/django-hyakunin-isshu",
+				"url": "https://github.com/AgentBoo/django-hyakunin-isshu"
 			},
 			{
 				"title": "focallocal.org",
 				"text": "Focallocal.org is a hub for a volunteer community to coordinate, collaborate, and grow projects aimed at helping homeless people and other people in need. The project is based on _Meteor_ and _React_. My contributions were on the front-end, fixing small issues in the UI and React form components.",
-				"repo": "/",
-				"url": "/"
+				"repo": "https://github.com/AgentBoo/fl-maps",
+				"url": "https://focallocal.org/"
 			},
 			{
-				"title": "brewdo",
+				"title": "BrewDo",
 				"text": "BrewDo allows homebrewers to collect, create, and iteratively experiment with beer recipe formulas, while keeping track of changes made from batch to batch. BrewDo was an 18 day group project at the Iron Yard, built with _Rails, Omniauth, Kaminari, diffy_, and _Bootstrap_. I was either fixing issues, or working on the action controllers and routing, but I also contributed to the layouts and view templates.",
-				"repo": "",
+				"repo": "https://github.com/jakedub/brewdo",
 				"url": "http://brewdo.herokuapp.com/"
 			}
 		]
 	},
 	"updates": {
-		"title": "So, what am I up to?",
+		"title": "What am I up to?",
 		"learning": [
-			"I am currently looking at _Node.js and Angular 7_."
+			"I use _python_ here and there."
 		]
 	}
 }

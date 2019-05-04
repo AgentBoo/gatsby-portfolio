@@ -5,15 +5,16 @@ import { Peekaboo } from "./peekaboo"
 
 const Header = ({ siteTitle }) => (
 	<header>
-		<nav className="nav-links">
+		<nav>
+			{/* prettier-ignore */}
 			<Link 
 				to="/" 
 				className="site-title">
-				{siteTitle}
+				<strong>{siteTitle}</strong>
 			</Link>
 			<Link
 				to="/about"
-				className="nav-link title"
+				className="nav-link"
 				activeClassName="nav-link-active">
 				<strong>About</strong>
 			</Link>
