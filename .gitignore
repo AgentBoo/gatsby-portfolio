@@ -70,3 +70,7 @@ yarn-error.log
 
 # misc 
 /legacy
+/public
+/static
+/assets
+/images
