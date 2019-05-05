@@ -9,12 +9,12 @@ const About = () => (
 				l10NJson {
 					about {
 						title
-						addendum
 						summary
 						details {
 							title
 							text
 						}
+						addendum
 					}
 				}
 			}
@@ -23,21 +23,17 @@ const About = () => (
 			<section className="about">
 				<h2>{l10NJson.about.title}</h2>
 				<div className="about-grid">
-					<div className="about-details">
+					<section className="about-details">
 						{l10NJson.about.details.map(paragraph => (
-							<section key={paragraph.title}>
-								<h4><strong>{paragraph.title}</strong></h4>
-								<FormattedText 
-									className="meta" 
-									text={paragraph.text} />
-							</section>
+							<article key={paragraph.title}>
+								<h4>{paragraph.title}</h4>
+								<FormattedText className="meta" text={paragraph.text} />
+							</article>
 						))}
-					</div>
+					</section>
 					<aside>
-						<h4><strong>Other than that ...</strong></h4>
-						<FormattedText
-							className="meta"
-							text={l10NJson.about.addendum} />
+						<h4>Other than that ...</h4>
+						<FormattedText className="meta" text={l10NJson.about.addendum} />
 					</aside>
 				</div>
 			</section>

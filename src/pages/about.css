@@ -6,36 +6,23 @@
 	grid-column: main-start/main-end;
 }
 
- 
-h4{
-	line-height: 1.9rem;
-	font-weight: normal;
-}
-
-.about-grid h4{
-	margin-bottom: 0;
-}
 .about-grid {
 	display: grid;
-	grid-gap: var(--spacer) calc(var(--spacer) * 1.7);
+	grid-gap: 1.333rem var(--spacer);
 	grid-template-columns: 1fr 1fr;
 	margin-top: 1.333rem;
 	text-align: justify;
-}
-
-p{
-	text-indent: 4em;
 }
 
 .about-details {
 	display: block;
 }
 
-.about-details > section {
-	padding-top: 1.933rem;
+.about-details article {
+	padding-top: 1.333rem;
 }
 
-.about-details > section:nth-of-type(1) {
+.about-details article:nth-of-type(1) {
 	padding-top: 0;
 }
 

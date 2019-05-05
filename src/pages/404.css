@@ -2,6 +2,11 @@
  * 404 page css
  */
 
- .not-found *{
- 	line-height: 1.8;
- }
+.not-found {
+	grid-column: main-start/main-end;
+}
+
+.not-found p {
+	line-height: 1.8;
+	text-indent: 0;
+}

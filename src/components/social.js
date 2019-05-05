@@ -23,7 +23,7 @@ const Social = () => (
 			<section className="social">
 				<ul className="list-inline">
 					<li>
-						<h3><strong>{l10NJson.social.title}</strong></h3>
+						<h3 className="pigment">{l10NJson.social.title}</h3>
 					</li>
 					{l10NJson.social.links.map(method => (
 						<li key={method.name}>
