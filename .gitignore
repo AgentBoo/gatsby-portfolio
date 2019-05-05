@@ -72,5 +72,4 @@ yarn-error.log
 /legacy
 /public
 /static
-/assets
-/images
+.pdf
