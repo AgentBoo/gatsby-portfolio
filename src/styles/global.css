@@ -1,5 +1,8 @@
 /** 
  * Global css is imported inside gatbsy-browser.js 
+ * 
+ * Only reset what you are going to actively 
+ * use in the document
  */
 
 :root {
@@ -16,7 +19,6 @@
   --lightgrey: #f2f2f3;
   --pale: #f7f8f9;
   --pink: #ee4266;
-  --robin: #93e1d8;
   --white: #fdfffc;
   --font-family-cursive: "Cabin Sketch", cursive;
   --font-family-light: "Oxygen", sans-serif;
@@ -368,22 +370,10 @@ a[href].nav-link-active {
   border-color: var(--primary);
 }
 
-.grey {
+.greyout {
   color: var(--grey);
 }
-
-.bolder{
-  font-weight: var(--bolder);
-}
-
-.lighter{
-  font-weight: var(--lighter);
-}
-
-.thin{
-  font-weight: 300;
-}
-
+ 
 .peekaboo {
   background-color: var(--black);
   border-radius: 50%;
