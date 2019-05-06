@@ -150,8 +150,13 @@ a[href]:hover {
 p {
   margin: 0;
   padding: 0;
-  text-indent: 4em;
+  text-align: left;
 }
+
+p + p{
+  margin-top: 0.75em;
+}
+
 b,
 strong {
   font-weight: inherit;
@@ -263,7 +268,7 @@ a[href].site-title:hover {
 
 a[href].nav-link {
   border-color: transparent;
-  border-width: 2.9px;
+  border-width: 3px;
   margin: 0 calc(calc(1rem + 0.1vw) * 2);
   padding-bottom: 4px;
 }
@@ -274,8 +279,8 @@ a[href].nav-link:hover {
 }
 
 a[href].nav-link-active {
-  border-color: var(--black);
-  color: var(--black);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .button {
@@ -323,6 +328,10 @@ a[href].nav-link-active {
   justify-content: center;
   list-style: none;
   margin-right: 1.52rem;
+}
+
+.list-inline > *:last-child{
+  margin-right: 0;
 }
 
 .list-block {

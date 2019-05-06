@@ -22,12 +22,12 @@ function touchUp(text, className) {
 	))
 }
 
-const FormattedText = ({ text, type, className, highlightClassName }) => {
+const FormattedText = ({ text, type, className, accentClassName }) => {
 	const Tag = type
 
 	return text.split("\n").map(paragraph => (
 		<Tag key={paragraph.slice(8)} className={className}>
-			{touchUp(paragraph, highlightClassName)}
+			{touchUp(paragraph, accentClassName)}
 		</Tag>
 	))
 }
@@ -35,14 +35,14 @@ const FormattedText = ({ text, type, className, highlightClassName }) => {
 FormattedText.defaultProps = {
 	type: `p`,
 	className: `default`,
-	formatClassName: `pigment`,
+	accentClassName: `pigment`,
 }
 
 FormattedText.propTypes = {
 	text: PropTypes.string,
 	type: PropTypes.string,
 	className: PropTypes.string,
-	formatClassName: PropTypes.string,
+	accentClassName: PropTypes.string,
 }
 
 export { FormattedText }

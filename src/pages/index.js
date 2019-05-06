@@ -7,6 +7,7 @@ import "./index.css"
 const IndexPage = () => (
 	<Layout>
 		<SEO title="ZH" keywords={[`react`, `zh`, `zuzka`, `han`, `hanova`]} />
+		<h1 className="site-title">Zuzka Han portfolio</h1>
 		<Introduction />
 		<Updates />
 		<Social />

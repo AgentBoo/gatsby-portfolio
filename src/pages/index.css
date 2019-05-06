@@ -2,6 +2,16 @@
  * Index page css
  */
 
+/* H1 SEO doesn't have height, is hidden, and is transparent (for good measure) */
+h1.site-title {
+	height: 0;
+	line-height: 0;
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	visibility: hidden;
+}
+
 /** 
  * Introduction looks more visually pleasing 
  * when it's not spanning the entire width 
@@ -42,8 +52,7 @@
 
 .index-social {
 	grid-column: main-start/main-end;
-	padding: 1.933rem 0;
-	margin-bottom: 2.3333rem;
+	padding: 1.5333rem 0 2.333rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -86,16 +95,20 @@ using flex
 .gallery-controls {
 	display: flex;
 	justify-content: space-between;
+	margin-right: 0;
 }
 
 .gallery-controls button {
 	margin-right: 1.52rem;
 }
 
+.gallery-description {
+	min-height: 120px;
+}
+
 .gallery-description p {
 	margin: 1.933rem 0 1.333rem;
 	line-height: 1.38;
-	text-indent: 0;
 }
 
 .gallery-description a {
@@ -106,16 +119,16 @@ using flex
 	.projects {
 		grid-column: main-start/main-end;
 	}
+
+	.gallery-controls {
+		margin-top: 1.333rem;
+		order: 10;
+	}
 }
 
 @media screen and (max-width: 600px) {
 	.gallery li > .list-inline {
 		align-items: start;
 		flex-flow: column;
-	}
-
-	.gallery-controls {
-		margin-top: 1.333rem;
-		order: 10;
 	}
 }
