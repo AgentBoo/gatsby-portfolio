@@ -1,6 +1,6 @@
 import React from "react"
 import { Layout, SEO } from "../components"
-import { Introduction, Social, Projects, Updates } from "../components"
+import { Introduction, Projects, Social, Updates } from "../components"
 
 import "./index.css"
 

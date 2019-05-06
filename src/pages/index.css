@@ -2,87 +2,114 @@
  * Index page css
  */
 
-/* Introduction */
+/** 
+ * Introduction looks more visually pleasing 
+ * when it's not spanning the entire width 
+ * of <main/> (on large desktop)
+ *
+ * Introduction uses fade transitions facilitated 
+ * by react-spring
+ *
+ */
 
-.intro {
+.index-intro {
 	grid-column: main-start/14;
 }
 
 @media screen and (max-width: 960px) {
-	.intro {
+	.index-intro {
 		grid-column: main-start/main-end;
 	}
 }
 
-/* Updates */
+/**
+ * Updates  
+ * 
+ */
 
-.updates {
+.index-updates {
 	grid-column: main-start/main-end;
 }
 
-.updates li:last-child h3{
+.index-updates li:last-child h3 {
 	font-weight: normal;
 }
 
-/* Social */
+/** 
+ * Social 
+ *
+ */
 
-.social {
+.index-social {
 	grid-column: main-start/main-end;
 	padding: 1.933rem 0;
 	margin-bottom: 2.3333rem;
 }
 
 @media screen and (max-width: 600px) {
-	.social .title + .list-inline {
+	.index-social .title + .list-inline {
 		margin-top: 5px;
 	}
 }
 
-/* Projects */
+/** 
+ * Projects looks more visually pleasing 
+ * when it's not spanning the entire width 
+ * of <main/> (on large desktop) 
+ * 
+ * Gallery uses fade transitions facilitated 
+ * by react-spring
+ */
 
-.projects {
+.index-projects {
 	grid-column: main-start/11;
 }
 
-.gallery{
+.gallery {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: flex-start;
 	justify-content: space-between;
 }
 
-.gallery li > .list-inline{
+/* 
+individual projects' titles are either 
+displayed inline in a row, or in a block, 
+using flex
+*/
+
+.gallery li > .list-inline {
 	align-items: center;
 	margin-left: 0;
-} 
+}
 
 .gallery-controls {
 	display: flex;
 	justify-content: space-between;
 }
 
-.gallery-controls button{
+.gallery-controls button {
 	margin-right: 1.52rem;
 }
 
-.gallery-description p{
+.gallery-description p {
 	margin: 1.933rem 0 1.333rem;
 	line-height: 1.38;
 	text-indent: 0;
 }
 
-.gallery-description a{
+.gallery-description a {
 	line-height: 2;
 }
 
 @media screen and (max-width: 960px) {
-	.projects{
+	.projects {
 		grid-column: main-start/main-end;
 	}
 }
- 
+
 @media screen and (max-width: 600px) {
-	.gallery li > .list-inline{
+	.gallery li > .list-inline {
 		align-items: start;
 		flex-flow: column;
 	}

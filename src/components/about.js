@@ -14,7 +14,10 @@ const About = () => (
 							title
 							text
 						}
-						addendum
+						addendum {
+							title
+							text
+						}
 					}
 				}
 			}
@@ -27,13 +30,18 @@ const About = () => (
 						{l10NJson.about.details.map(paragraph => (
 							<article key={paragraph.title}>
 								<h4>{paragraph.title}</h4>
-								<FormattedText className="meta" text={paragraph.text} />
+								<FormattedText 
+									className="meta" 
+									text={paragraph.text} />
 							</article>
 						))}
 					</section>
 					<aside>
-						<h4>Other than that ...</h4>
-						<FormattedText className="meta" text={l10NJson.about.addendum} />
+						<h4>{l10NJson.about.addendum.title}</h4>
+						<FormattedText
+							className="meta"
+							text={l10NJson.about.addendum.text}
+						/>
 					</aside>
 				</div>
 			</section>

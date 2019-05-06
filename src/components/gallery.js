@@ -9,10 +9,6 @@ const Gallery = ({ title, projects }) => {
 	let [min, max] = [0, projects.length - 1]
 	let [page, setPage] = useState(min)
 
-	function selectPage(page) {
-		setPage(page)
-	}
-
 	function prevPage() {
 		setPage(page - 1)
 	}
@@ -33,16 +29,18 @@ const Gallery = ({ title, projects }) => {
 			<ul className="list-inline">
 				<li>
 					<ul className="list-inline">
-						{projects.map(project => (
+						{projects.map((project, index) => (
 							<li key={project.title}>
-								<h3
-									className={
-										project.title == projects[page].title
-											? "pigment"
-											: "default"
-									}
-									onClick={selectPage}>
-									<a href={project.url} target="__blank">
+								<h3 onClick={() => setPage(index)}>
+									<a
+										className={
+											project.title === projects[page].title
+												? "pigment"
+												: "default"
+										}
+										href={project.url}
+										target="__blank"
+									>
 										{project.title}
 									</a>
 								</h3>
@@ -63,18 +61,9 @@ const Gallery = ({ title, projects }) => {
 						<animated.div key={key} style={props}>
 							<div className="gallery-description meta">
 								<FormattedText text={item.text} />
-								<ul className="list-inline">
-									<li>
-										<a href={item.repo} target="__blank">
-											demo
-										</a>
-									</li>
-									<li>
-										<a href={item.repo} target="__blank">
-											repo
-										</a>
-									</li>
-								</ul>
+								<a href={item.repo} target="__blank">
+									repo
+								</a>
 							</div>
 						</animated.div>
 					))}

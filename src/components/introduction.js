@@ -16,21 +16,26 @@ const Introduction = () => {
 				query {
 					l10NJson {
 						introduction {
-							text
-							subtext
+							title
+							subtitle
 						}
 					}
 				}
 			`}
 			render={({ l10NJson }) => (
-				<section className="intro">
+				<section className="index-intro">
 					<animated.div style={style}>
 						<ul className="list-block">
 							<li>
-								<FormattedText type="h2" text={l10NJson.introduction.text} />
+								<FormattedText 
+									type="h2" 
+									text={l10NJson.introduction.title} />
 							</li>
 							<li>
-								<FormattedText type="h2" text={l10NJson.introduction.subtext} />
+								<FormattedText
+									type="h2"
+									text={l10NJson.introduction.subtitle}
+								/>
 							</li>
 						</ul>
 					</animated.div>

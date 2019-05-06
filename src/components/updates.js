@@ -1,3 +1,10 @@
+/**
+ * Updates component queries for content about
+ * what I'm currently doing in life with Gatsby's
+ * StaticQuery component
+ *
+ */
+
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { FormattedText } from "./formattedText"
@@ -9,16 +16,16 @@ const Updates = () => (
 				l10NJson {
 					updates {
 						title
-						learning
+						details
 					}
 				}
 			}
 		`}
 		render={({ l10NJson, file }) => (
-			<section className="updates">
+			<section className="index-updates">
 				<ul className="list-block">
-					{l10NJson.updates.learning.map(text => (
-						<li>
+					{l10NJson.updates.details.map((text, index) => (
+						<li key={index}>
 							<FormattedText key={text} type="h3" text={text} />
 						</li>
 					))}

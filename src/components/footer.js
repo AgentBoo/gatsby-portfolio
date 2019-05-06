@@ -7,8 +7,7 @@ const Footer = ({ siteTitle }) => (
 			© {new Date().getFullYear()} {siteTitle}.
 		</span>
 		<span>
-			This page was created with{" "}
-			<a href="https://www.gatsbyjs.org/">Gatsby</a>
+			This page was created with <a href="https://www.gatsbyjs.org/">Gatsby</a>
 		</span>
 	</footer>
 )

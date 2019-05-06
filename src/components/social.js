@@ -1,3 +1,10 @@
+/**
+ * Social component queries for social media links
+ * and a resume pdf file with Gatsby's StaticQuery
+ * component
+ *
+ */
+
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -20,7 +27,7 @@ const Social = () => (
 			}
 		`}
 		render={({ l10NJson, file }) => (
-			<section className="social">
+			<section className="index-social">
 				<ul className="list-inline">
 					<li>
 						<h3 className="pigment">{l10NJson.social.title}</h3>
@@ -29,7 +36,7 @@ const Social = () => (
 						<li key={method.name}>
 							<h3>
 								<a href={method.url} target="__blank">
-									<strong>{method.name}</strong>
+									{method.name}
 								</a>
 							</h3>
 						</li>
@@ -37,7 +44,7 @@ const Social = () => (
 					<li>
 						<h3>
 							<a href={file.publicURL} target="__blank">
-								<strong>resume</strong>
+								resume
 							</a>
 						</h3>
 					</li>
